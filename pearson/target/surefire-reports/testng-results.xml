@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="com.pearson.test.LoginTest" duration-ms="97221" started-at="2016-05-06T05:45:54Z" finished-at="2016-05-06T05:47:31Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="97221" started-at="2016-05-06T05:45:54Z" finished-at="2016-05-06T05:47:31Z">
+      <class name="com.pearson.test.LoginTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.pearson.test.LoginTest@59a6e353]" name="setUp" is-config="true" duration-ms="90120" started-at="2016-05-06T11:15:54Z" finished-at="2016-05-06T11:17:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testLogin()[pri:0, instance:com.pearson.test.LoginTest@59a6e353]" name="testLogin" duration-ms="1" started-at="2016-05-06T11:17:24Z" finished-at="2016-05-06T11:17:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.pearson.test.LoginTest@59a6e353]" name="tearDown" is-config="true" duration-ms="6888" started-at="2016-05-06T11:17:24Z" finished-at="2016-05-06T11:17:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.pearson.test.LoginTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- com.pearson.test.LoginTest -->
+</testng-results>
