@@ -16,9 +16,9 @@ public class LoginPage {
 	@FindBy(name = "password")
 	WebElement password;
 
-	@FindBy(className = "barone")
+	@FindBy(id = "hplogo")
 	WebElement titletext;
-
+		
 	@FindBy(name = "btnLogin")
 	WebElement login;
 
@@ -33,8 +33,8 @@ public class LoginPage {
 	}
 
 	// Get Title of Login Page
-	public String getLoginTitlePage() {
-		return titletext.getText();
+	public Boolean getLoginTitlePage() {
+		return titletext.isDisplayed();
 	}
 
 	// Set Username

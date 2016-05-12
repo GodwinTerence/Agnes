@@ -13,7 +13,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-
 public class AutomationAgent {
 
 	public static WebDriver driver;
@@ -22,8 +21,7 @@ public class AutomationAgent {
 
 	public AutomationAgent(String testDetails) throws Exception {
 		loadProperties();
-		initialiseWebDriver(getConfigProperty("Browser"));
-		launchApplication(getConfigProperty("ApplicationURL"));
+		initialiseWebDriverAndLaunch(getConfigProperty("Browser"), getConfigProperty("ApplicationURL"));
 	}
 
 	public void loadProperties() throws Exception {
@@ -45,11 +43,7 @@ public class AutomationAgent {
 		FIREFOX, CHROME, IE
 	};
 
-	public void launchApplication(String applicationUrl) {
-		driver.get(applicationUrl);
-	}
-
-	public void initialiseWebDriver(String browserType) {
+	public void initialiseWebDriverAndLaunch(String browserType, String applicationUrl) {
 		WebDriverType browsertype = WebDriverType.valueOf(browserType.toUpperCase());
 
 		switch (browsertype) {
@@ -73,7 +67,7 @@ public class AutomationAgent {
 			logger.error("Invalid browser: ");
 			break;
 		}
-
+		driver.get(applicationUrl);
 	}
 
 	public void quitDriver() {
