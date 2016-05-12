@@ -28,7 +28,7 @@ public class LoginTest {
 	@Test
 	public void testLogin() {
 		objLoginPage=new LoginPage(driver);
-		assertFalse(objLoginPage.getLoginTitlePage());
+		assertTrue(objLoginPage.getLoginTitlePage());
 	}
 
 	@AfterMethod
