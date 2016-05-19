@@ -8,8 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.pearson.framework.*;
 
-public class HomePage {
-	WebDriver driver;
+public class HomePage extends AutomationAgent{
+	
 
 	@FindBy(xpath="//table//tr[@class='heading3']")
 	WebElement homePageUserName;

@@ -11,29 +11,36 @@ import com.pearson.PageObject.LoginPage;
 import com.pearson.PageObject.HomePage;
 import com.pearson.framework.*;
 
-public class LoginTest {	
-	public AutomationAgent AssessmentAutomationAgent;
-	WebDriver driver;
+public class LoginTest extends AutomationAgent {
+
 	public LoginPage objLoginPage;
 	public HomePage objHomePage;
 
-	@BeforeMethod
 	@BeforeTest
-	public void setUp() throws Exception {
-		//AssessmentAutomationAgent.loadProperties();
-		driver = new FirefoxDriver();
-		driver.get("https://www.google.co.in");
+	public static void setUp() throws Exception {
+		preLaunch();
 	}
 
 	@Test
-	public void testLogin() {
-		objLoginPage=new LoginPage(driver);
+	public void testLoginGodwin() {
+		objLoginPage = new LoginPage();
 		assertTrue(objLoginPage.getLoginTitlePage());
 	}
 
-	@AfterMethod
+	@Test
+	public void testLoginAllwin() {
+		objLoginPage = new LoginPage();
+		assertTrue(objLoginPage.getLoginTitlePage());
+	}
+
+	@Test
+	public void testLoginZubin() {
+		objLoginPage = new LoginPage();
+		assertFalse(objLoginPage.getLoginTitlePage());
+	}
+
 	@AfterTest
 	public void tearDown() {
-		driver.quit();
+		quitDriver();
 	}
 }

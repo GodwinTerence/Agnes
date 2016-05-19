@@ -8,8 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.pearson.framework.*;
 
-public class LoginPage {
-	WebDriver driver;
+public class LoginPage extends AutomationAgent{
+
 	@FindBy(name = "uid")
 	WebElement userName;
 
@@ -22,7 +22,7 @@ public class LoginPage {
 	@FindBy(name = "btnLogin")
 	WebElement login;
 
-	public LoginPage(WebDriver driver) {
+	public LoginPage() {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}

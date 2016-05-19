@@ -19,9 +19,11 @@ public class AutomationAgent {
 	public static Properties prop = new Properties();
 	private static Logger logger = Logger.getLogger(AutomationAgent.class);
 
-	public AutomationAgent(String testDetails) throws Exception {
-		loadProperties();
-		initialiseWebDriverAndLaunch(getConfigProperty("Browser"), getConfigProperty("ApplicationURL"));
+	
+	public static void preLaunch() throws Exception {
+		AutomationAgent at=new AutomationAgent();
+		at.loadProperties();
+		at.initialiseWebDriverAndLaunch(getConfigProperty("Browser"), getConfigProperty("ApplicationURL"));
 	}
 
 	public void loadProperties() throws Exception {
