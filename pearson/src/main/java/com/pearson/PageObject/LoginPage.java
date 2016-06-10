@@ -48,9 +48,9 @@ public class LoginPage extends AutomationAgent{
 	}
 
 	// login Application
-	public void loginApplication(String user, String Pwd) {
+	public HomePage loginApplication(String user, String Pwd) {
 		this.setUserName(user);
-		this.setPassword(Pwd);
-		this.clickLogin();
+		this.setPassword(Pwd);		
+		return new HomePage(driver);
 	}
 }

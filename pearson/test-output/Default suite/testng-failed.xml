@@ -5,6 +5,7 @@
     <classes>
       <class name="com.pearson.test.LoginTest">
         <methods>
+          <include name="tearDown"/>
           <include name="testLogin"/>
           <include name="setUp"/>
         </methods>
