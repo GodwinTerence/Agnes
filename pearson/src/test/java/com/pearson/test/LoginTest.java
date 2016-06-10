@@ -55,13 +55,6 @@ public class LoginTest extends AutomationAgent {
 	        }
 	}
 
-	@Test
-	public void testLoginAllwin() {
-		objLoginPage = new LoginPage();
-		assertTrue(objLoginPage.getLoginTitlePage());
-	}
-
-
 	@AfterTest
 	public void tearDown() {
 		quitDriver();

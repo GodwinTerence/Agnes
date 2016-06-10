@@ -5,8 +5,8 @@
     <classes>
       <class name="com.pearson.test.LoginTest">
         <methods>
+          <include name="testLoginAllwin"/>
           <include name="tearDown"/>
-          <include name="testLogin"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.pearson.test.LoginTest -->

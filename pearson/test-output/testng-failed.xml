@@ -2,13 +2,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <listeners>
-    <listener class-name="com.pearson.test.ExtentReporterNG"/>
+    <listener class-name="com.pearson.framework.AutomationAgent"/>
   </listeners>
   <test name="Test(failed)">
     <classes>
       <class name="com.pearson.test.LoginTest">
         <methods>
-          <include name="testLoginZubin"/>
+          <include name="testLoginAllwin"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
